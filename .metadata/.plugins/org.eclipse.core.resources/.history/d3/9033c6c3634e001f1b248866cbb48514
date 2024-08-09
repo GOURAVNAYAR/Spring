@@ -1,0 +1,21 @@
+package com.springorm;
+
+import org.hibernate.SessionFactory;
+import org.springframework.orm.hibernate5.HibernateTemplate;
+public class EmployeeDao {
+
+    private HibernateTemplate hibernateTemplate;
+
+    public void setSessionFactory(SessionFactory factory) {
+        this.hibernateTemplate = new HibernateTemplate(factory);
+    }
+
+    public void setHibernateTemplate(HibernateTemplate hibernateTemplate) {
+        this.hibernateTemplate = hibernateTemplate;
+    }
+
+    public void saveEmployee(Employee e) {
+        this.hibernateTemplate.save(e);
+    }
+}
+

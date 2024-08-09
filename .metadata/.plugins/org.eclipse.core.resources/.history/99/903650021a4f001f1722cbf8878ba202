@@ -1,0 +1,8 @@
+package com.springorm.get;
+
+public class StudentDao {
+
+	public void save(Student student) {
+		
+	}
+}

@@ -1,0 +1,9 @@
+
+n
+java:S1128"6Remove this unused import 'com.springorm.EmployeeDao'.(€‰§öúÿÿÿÿ8ñ’ÔÁ2HRMINORZ
+CODE_SMELL
+…	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¯ßÈ“HŸRMINORZ
+CODE_SMELL
+k
+java:S1128"3Remove this unused import 'com.springorm.Employee'.(ê¾Ïšıÿÿÿÿ8ñ’ÔÁ2H RMINORZ
+CODE_SMELL

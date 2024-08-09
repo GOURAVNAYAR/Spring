@@ -1,0 +1,15 @@
+package com.springorm;
+
+public class EmployeeDao {
+
+	HibernateTemplate template; 
+	   public void setSessionFactory(SessionFactory factory) 
+	     { 
+	       template=new HibernateTemplate(factory); 
+	     } 
+	   public void saveEmployee(Employee e)
+	    { 
+	       template.save(e); 
+	   } 
+
+}

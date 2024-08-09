@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xsi:schemaLocation="(link unavailable) (link unavailable) (link unavailable) (link unavailable) (link unavailable) (link unavailable) " xmlns:tx="(link unavailable)" xmlns:p="(link unavailable)" xmlns:context="(link unavailable)" xmlns:xsi="(link unavailable)" xmlns="(link unavailable)">
+
+    <bean class="com.springcore.BeanScopes.Student" name="student">
+        <property name="studentName" value="Gourav" />
+        <property name="studentCity" value="Timarni" />
+        <property name="studentAddress" value="(link unavailable) 6" />
+    </bean>
+
+    <bean class="com.springcore.BeanScopes.Singleton.Senior" name="senior" scope="singleton">
+        <property name="student" ref="student"></property>
+    </bean>
+
+</beans>

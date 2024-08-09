@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd "
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.springframework.org/schema/beans">
+
+	<bean
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource"
+		name="ds">
+
+		<property name="driverClassName"
+			value=“com.jdbc.mysql.Drivers "></property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/Spring_orm
+		</property>
+		<property name="connection.user">root</property>
+		<property name="connection.password">root</property>
+	</bean>
+
+	<bean
+		class="org.springframework.orm.hibernate5.LocalSessionFactoryBean"   	    <!--  3).........LoadSessionFactory..............................  -->
+		name="factory">
+
+		<property name="dataSource" ref="ds"></property>    						<!-- 3.1)................DATA SOURCE.............................. -->
+		<property name="hibernateProperties">               						<!-- 3.2)................Hibernate properties..................... -->
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQL57Dialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+			</props>
+		</property>
+	</bean>
+
+	<bean class="org.springframework.orm.hibernate5.HibernateTemplate" name="hibernateTemplate">              <!--  2)........HivernateTamplate ko sessionFactory mil jaye ga..-->
+		
+		<property name="sessionFactory" ref="factory"></property>
+	</bean>
+																		             <!--  1)........ProductDao ko HibernateTemplate mil gaya.........-->
+	<bean class="com.springorm.EmployeeDao" name="employeeDao">
+		<property name="HibernateTemplate" ref="hibernateTemplate"></property>
+
+	</bean>
+
+</bean>
+
+</beans>

@@ -1,0 +1,32 @@
+package com.springorm.Explane.get;
+
+import com.springorm.Employee;
+import com.springorm.EmployeeDao;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Logic {
+
+	public static void main(String[] args) {
+
+		ApplicationContext context = new ClassPathXmlApplicationContext("com/springorm/Explane/get/ApplicationContext.xml");
+		StudentDao dao = (StudentDao) context.getBean("studentDao");
+		
+		
+	// Save a new employee
+		Student student = new Student();
+		student.setStudentId(101);
+		student.setStudentName("Gourav");
+		student.setStudentSalry("56479");
+		dao.saveStudent(student);
+
+		/*
+		 * // Get a single employee Employee retrievedEmployee = dao.getEmployee(200);
+		 * System.out.println("Employee retrieved: " +
+		 * retrievedEmployee.getEmployeeName());
+		 */
+	
+
+	}
+}

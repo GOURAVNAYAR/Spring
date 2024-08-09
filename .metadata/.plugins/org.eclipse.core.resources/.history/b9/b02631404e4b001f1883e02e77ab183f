@@ -1,0 +1,10 @@
+package com.springcore.BeanScopes;
+
+public class Student {
+
+	private String studentName;
+	private String studentCity;
+	private String studentAddress;
+
+	
+}

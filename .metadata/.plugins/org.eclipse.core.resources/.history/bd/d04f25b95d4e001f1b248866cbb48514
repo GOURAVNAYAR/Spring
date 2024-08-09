@@ -1,0 +1,14 @@
+package com.springorm;
+
+import org.springframework.orm.hibernate5.HibernateTemplate;
+
+public class EmployeeDao {
+
+	private HibernateTemplate template; 
+	  
+	   public void saveEmployee(Employee e)
+	    { 
+		   Integer i = (Integer) this.template.save(e);
+	   } 
+
+}

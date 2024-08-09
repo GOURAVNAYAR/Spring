@@ -1,0 +1,25 @@
+package com.springcore.BeanScopes.Singleton;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Logic {
+
+	public static void main(String[] args) {
+		ApplicationContext context = new ClassPathXmlApplicationContext("com/springcore/BeanScopes/config.xml");
+
+		Student student = context.getBean("Student", Student.class);
+		Student student1 = context.getBean("Student", Student.class);
+		
+		
+		System.out.println("This is First Object Hashcode............");
+		System.out.println(student.hashCode());
+		
+		
+		System.out.println("This is Second Object Hashcode............");
+		System.out.println(student1.hashCode() + "\n");
+		
+		System.out.println("There are Same hashcode mean's Singleton Scope............");
+
+	}
+}

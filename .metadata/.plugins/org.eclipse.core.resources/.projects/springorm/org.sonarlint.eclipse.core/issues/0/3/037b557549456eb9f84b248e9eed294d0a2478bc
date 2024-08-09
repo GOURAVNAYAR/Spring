@@ -1,0 +1,15 @@
+
+i
+java:S1135#"2Complete the task associated to this TODO comment.(» æÿÿÿÿÿ8ëåÆ2H¿RINFOZ
+CODE_SMELL
+…	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¯ßÈ“H¦RMINORZ
+CODE_SMELL
+X
+java:S1481"&Remove this unused "i" local variable.(Š½¥x8İÿÁ2H§RMINORZ
+CODE_SMELL
+g
+java:S1854"5Remove this useless assignment to local variable "i".(Š½¥x8İÿÁ2H¥RMAJORZ
+CODE_SMELL
+£
+java:S1845"nRename method "setHibernatetemplate" to prevent any misunderstanding/clash with method "setHibernateTemplate".(ùšõ8ÔÓÎÆ2HßRBLOCKERZ
+CODE_SMELL

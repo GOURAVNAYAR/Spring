@@ -1,0 +1,8 @@
+package com.springcore.BeanScopes;
+
+public class Logic {
+
+	public static void main(String[] args) {
+		
+	}
+}

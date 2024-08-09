@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd "
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.springframework.org/schema/beans">
+
+<bean class = " " name="factory" ></bean>
+
+<bean class ="org.springframework.orm.hibernate5.HibernateTemplate" name = "hibernateTemplate">
+<property name = "sessionFactory" ref= "factory"></property>
+</bean>
+
+	<bean class="com.springorm.Employee" name ="employee">
+		<property name="HibernateTemplate" ref="hibernateTemplate"></property>
+			
+			</bean>
+		<property name="connection.url">jdbc:mysql://localhost:3306/Spring_orm</property>
+		<property name="connection.user">root</property>
+		<property name="connection.password">root</property>
+	</bean>
+
+</beans>

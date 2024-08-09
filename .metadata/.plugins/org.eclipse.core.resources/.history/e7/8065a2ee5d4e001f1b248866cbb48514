@@ -1,0 +1,25 @@
+package com.springorm;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class InsertTest {
+
+	public static void main(String[] args) {
+		
+		ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+		EmployeeDao employeeDao = context.getBean("employeeDao",EmployeeDao.class);
+		
+		Resource r=new ClassPathResource("applicationContext.xml"); 
+		BeanFactory factory=new XmlBeanFactory(r);
+		 EmployeeDao dao=(EmployeeDao)factory.getBean("dao"); 
+		Employee e=new Employee(); 
+		e.setEmployeeId(200); 
+		e.setEmployeeName("Gourav"); 
+		e.setEmployeeSalry(50000); 
+		dao.saveEmployee(e); 
+
+
+		
+	}
+}

@@ -1,0 +1,12 @@
+package com.springorm.get;
+
+import org.springframework.orm.hibernate5.HibernateTemplate;
+
+public class StudentDao {
+
+	private HibernateTemplate hibernatetemplate;
+
+	public void save(Student student) {
+		this.hibernatetemplate.save(student);
+	}
+}

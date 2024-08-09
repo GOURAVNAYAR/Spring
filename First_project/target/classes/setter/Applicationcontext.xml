@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+  <bean id="id1" class="setter.WelcomeBean">
+        <property name="studentsData">
+            <set>
+                <value>sun</value>
+                <value>Oracle</value>
+                <value>java4s</value>
+            </set>
+        </property>
+    </bean>
+</beans>

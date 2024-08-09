@@ -1,0 +1,5 @@
+package com.springcore.BeanScopes.Singleton;
+
+public class Senior {
+
+}

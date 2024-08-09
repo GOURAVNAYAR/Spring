@@ -1,0 +1,5 @@
+package com.springcore.autowire.ByType;
+
+public class Logic {
+
+}

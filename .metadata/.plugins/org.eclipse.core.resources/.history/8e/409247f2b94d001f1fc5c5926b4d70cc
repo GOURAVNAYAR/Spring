@@ -1,0 +1,12 @@
+package com.springorm;
+
+public class EmployeeDao {
+
+	private HibernateTemplate template; 
+	  
+	   public void saveEmployee(Employee e)
+	    { 
+		   Integer i = (Integer) this.template.save(e)
+	   } 
+
+}
